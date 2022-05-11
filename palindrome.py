@@ -1,5 +1,6 @@
 import os
 
+#definicion de funciones con tipado estatico
 def is_palindrome(word: str) -> bool:
     word = word.replace(' ','').lower()
     return word == word[::-1]
@@ -15,7 +16,7 @@ def is_prime(number: int) -> bool:
 if __name__ == "__main__":
     os.system("cls")
     try:
-        numero = input('Ingresa un numero por favor: ')
+        numero : int = input('Ingresa un numero por favor: ')
         assert numero.isnumeric() == True and int(numero) > 0, 'el numero ingresado debe ser positivo'
     except AssertionError as AE:
         print('el numero ingresado debe ser positivo')
